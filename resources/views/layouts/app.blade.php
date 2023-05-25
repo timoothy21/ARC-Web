@@ -1,47 +1,35 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+       
+        @include('includes.dashboard.meta')
+        <title>@yield('title') | SERV </title>
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        @stack('before-style')
+        @include('includes.dashboard.style')
+        @stack('after-style')
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
-   
-
-        <!-- Styles -->
-        @livewireStyles
-
-        <!-- Scripts -->
-        <!-- @vite(['resources/css/app.css', 'resources/js/app.js']) -->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
-    <body class="font-sans antialiased">
-        <x-jet-banner />
+    <body class="antialiased">
+        <div class="flex h-screen bg-serv-services-bg" :class="{ 'overflow-hidden': isSideMenuOpen }">
 
-        <div class="min-h-screen bg-gray-100">
-            @livewire('navigation-menu')
+            @include('components.dashboard.desktop')
 
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
+            <div x-show="isSideMenuOpen" x-transition:enter="transition ease-in-out duration-150" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in-out duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="fixed inset-0 flex items-end bg-black bg-opacity-50 z-1 sm:items-center sm:justify-center"></div>
 
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
+            @include('components.dashboard.mobile')
+
+            <div class="flex flex-col flex-1 w-full">
+                @include('components.dashboard.header')
+                {{-- @include('sweetalert::aler') --}}
+                @yield('content')
+            </div>
+
         </div>
 
-        @stack('modals')
+        @stack('before-script')
+        @include('includes.dashboard.script')
+        @stack('after-script')
 
-        @livewireScripts
     </body>
 </html>
