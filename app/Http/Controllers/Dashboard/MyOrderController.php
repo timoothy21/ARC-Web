@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use GuzzleHttp\RetryMiddleware;
 use Illuminate\Http\Request;
 
 class MyOrderController extends Controller
@@ -11,10 +12,12 @@ class MyOrderController extends Controller
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
+     * 
      */
+
     public function index()
     {
-        //
+        return view('pages.dashboard.order.index');
     }
 
     /**
@@ -46,7 +49,7 @@ class MyOrderController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('pages.dashboard.order.detail');
     }
 
     /**
@@ -57,7 +60,7 @@ class MyOrderController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('pages.dashboard.order.edit');
     }
 
     /**
