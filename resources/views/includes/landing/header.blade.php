@@ -3,8 +3,8 @@
     <div class="navbar-1-1" style="font-family: 'Poppins', sans-serif">
         <div class=" mx-auto flex flex-wrap flex-row items-center justify-between">
 
-        <a href="index.php" class="flex text-3xl font-bold items-center">
-                SERV
+        <a href="{{ route('index')}}" class="flex text-3xl font-bold items-center">
+                ARC
             </a>
 
             <label for="menu-toggle" class="cursor-pointer lg:hidden block">
@@ -22,8 +22,8 @@
                 id="menu">
                 <nav
                     class="lg:space-x-12 space-x-0 lg:flex items-center justify-between text-base pt-8 lg:pt-0 lg:space-y-0 space-y-6">
-                    <a href="{{ route('index') }}" class="block nav-link active font-medium">Home</a>
-                    <a href="{{ route('explore.landing') }}" class="block nav-link text-serv-text">Explore</a>
+                    <a href="{{ route('index') }}" class="block {{request()->is('/') ? 'nav-link active font-medium' : 'nav-link text-serv-text'}}">Home</a>
+                    <a href="{{ route('explore.landing') }}" class="block {{request()->is('explore') ? 'nav-link active font-medium' : 'nav-link text-serv-text'}}">Explore</a>
                     <a href="#" class="block nav-link text-serv-text">How It Works</a>
                     <a href="#" class="block nav-link text-serv-text">Stories</a>
                     <a href="#" class="block nav-link text-serv-text">Tips</a>
