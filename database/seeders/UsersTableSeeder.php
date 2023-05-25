@@ -19,7 +19,7 @@ class UsersTableSeeder extends Seeder
             [
                 'name' => 'John Doe',
                 'email' => 'john@gmail.com',
-                'password' => Hash::make('admin'),
+                'password' => Hash::make('admin1234'),
                 'remember_token' => NULL,
                 'created_at' => date('Y-m-d h:i:s'),
                 'updated_at' => date('Y-m-d h:i:s'),
@@ -27,7 +27,7 @@ class UsersTableSeeder extends Seeder
             [
                 'name' => 'Jane Doe',
                 'email' => 'jane@gmail.com',
-                'password' => Hash::make('admin'),
+                'password' => Hash::make('admin1234'),
                 'remember_token' => NULL,
                 'created_at' => date('Y-m-d h:i:s'),
                 'updated_at' => date('Y-m-d h:i:s'),
