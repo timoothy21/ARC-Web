@@ -2844,6 +2844,11 @@ select {
   color: rgb(234 179 8 / var(--tw-text-opacity));
 }
 
+.text-serv-login-text {
+  --tw-text-opacity: 1;
+  color: rgb(92 92 105 / var(--tw-text-opacity));
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -3800,6 +3805,14 @@ select {
     margin-top: 5rem;
   }
 
+  .lg\:ml-auto {
+    margin-left: auto;
+  }
+
+  .lg\:mr-auto {
+    margin-right: auto;
+  }
+
   .lg\:block {
     display: block;
   }
@@ -3872,6 +3885,11 @@ select {
   }
 
   .lg\:bg-arc-btn-deactive {
+    --tw-bg-opacity: 1;
+    background-color: rgb(244 244 250 / var(--tw-bg-opacity));
+  }
+
+  .lg\:bg-serv-services-bg {
     --tw-bg-opacity: 1;
     background-color: rgb(244 244 250 / var(--tw-bg-opacity));
   }
