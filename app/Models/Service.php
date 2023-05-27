@@ -34,7 +34,7 @@ class Service extends Model
 
     // one to many
     public function user() {
-        return $this->belongsTo('App/Models/User', 'users_id', 'id');
+        return $this->belongsTo('App\Models\User', 'users_id', 'id');
     }
 
     public function advantage_user() {
