@@ -9,6 +9,7 @@ use Auth;
 
 use App\Models\Order;
 use App\Models\Service;
+use App\Models\User;
 use App\Models\AdvantageUser;
 use App\Models\Tagline;
 use App\Models\AdvantageService;
@@ -97,6 +98,8 @@ class LandingController extends Controller
     // custom
 
     public function explore() {
+        $services = Service::orderBy('created_at', 'desc')->get();
+
         return view('pages.landing.explore', compact('services'));
     }
 

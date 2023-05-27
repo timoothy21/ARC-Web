@@ -26,7 +26,7 @@
                     {{-- buat category --}}
                     <div class="category-option">
                         <h2 class=" font-bold text-2xl">Category</h2>
-                        <nav class="my-2" aria-label="navigation">
+                        <nav class="my-2 w-64" aria-label="navigation">
                             <a class="bg-arc-bg text-white block sm:inline-block my-1 py-2 px-8 font-medium rounded-xl" href="#">
                                 All Services
                             </a>
@@ -47,7 +47,12 @@
 
                     <div class="content-isi">
                         <div class="grid grid-cols lg:grid-cols-3 md:grid-cols-2 gap-4">
-                            @include('components.landing.service-explore')
+                            @forelse ($services as $item)
+                                @include('components.landing.service')
+                            @empty
+                                {{-- empty --}}
+                            @endforelse
+
                         </div>
                         <div class="text-center mt-10">
                             <a class="bg-arc-bg text-white block sm:inline-block my-2 py-2 px-8 mx-4 font-medium rounded-xl" href="#">

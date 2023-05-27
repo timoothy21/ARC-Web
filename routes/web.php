@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 // Front (landing)
 use App\Http\Controllers\Landing\LandingController;
+use App\Models\User;
 
 // member (dashboard)
 use App\Http\Controllers\Dashboard\MemberController;
