@@ -14,7 +14,7 @@
             <div class="hidden lg:flex lg:items-center lg:w-auto w-full flex-wrap items-center text-base justify-center" id="menu">
                 <nav class="lg:space-x-12 space-x-0 lg:flex items-center justify-between text-base pt-8 lg:pt-0 lg:space-y-0 space-y-6">
                     <a href="{{ route('index') }}" class="block {{request()->is('/') ? 'nav-link active font-medium' : 'nav-link text-gray-500'}}">Home</a>
-                    <a href="{{ route('explore.landing') }}" class="block {{request()->is('explore') ? 'nav-link active font-medium' : 'nav-link text-gray-500'}}">Daftar Service</a>
+                    <a href="{{ route('explore.landing') }}" class="block {{request()->is('explore') ? 'nav-link active font-medium' : 'nav-link text-gray-500'}}">Katalog Service</a>
                     <a href="#" class="block nav-link text-gray-500">About Us</a>
 
                 @auth

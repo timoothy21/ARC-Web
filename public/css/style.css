@@ -2210,6 +2210,14 @@ select {
   background-color: rgb(255 120 120 / var(--tw-bg-opacity));
 }
 
+.bg-arc-bg\/10 {
+  background-color: rgb(255 120 120 / 0.1);
+}
+
+.bg-arc-soft\/10 {
+  background-color: rgb(250 236 226 / 0.1);
+}
+
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
@@ -2285,11 +2293,6 @@ select {
   background-color: rgb(8 36 49 / var(--tw-bg-opacity));
 }
 
-.bg-serv-bg-explore {
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 248 253 / var(--tw-bg-opacity));
-}
-
 .bg-serv-button {
   --tw-bg-opacity: 1;
   background-color: rgb(34 176 125 / var(--tw-bg-opacity));
@@ -2332,6 +2335,10 @@ select {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-arc-bg\/50 {
+  background-color: rgb(255 120 120 / 0.5);
 }
 
 .bg-opacity-25 {
@@ -2844,9 +2851,12 @@ select {
   color: rgb(234 179 8 / var(--tw-text-opacity));
 }
 
-.text-serv-login-text {
-  --tw-text-opacity: 1;
-  color: rgb(92 92 105 / var(--tw-text-opacity));
+.text-black\/80 {
+  color: rgb(0 0 0 / 0.8);
+}
+
+.text-white\/80 {
+  color: rgb(255 255 255 / 0.8);
 }
 
 .underline {
@@ -3805,14 +3815,6 @@ select {
     margin-top: 5rem;
   }
 
-  .lg\:ml-auto {
-    margin-left: auto;
-  }
-
-  .lg\:mr-auto {
-    margin-right: auto;
-  }
-
   .lg\:block {
     display: block;
   }
@@ -3885,11 +3887,6 @@ select {
   }
 
   .lg\:bg-arc-btn-deactive {
-    --tw-bg-opacity: 1;
-    background-color: rgb(244 244 250 / var(--tw-bg-opacity));
-  }
-
-  .lg\:bg-serv-services-bg {
     --tw-bg-opacity: 1;
     background-color: rgb(244 244 250 / var(--tw-bg-opacity));
   }

@@ -4,7 +4,7 @@
 
 @section('content')
 
-<!-- top -->
+<!-- top --> 
     <div class="hero-bg">
 
         <!-- hero -->
