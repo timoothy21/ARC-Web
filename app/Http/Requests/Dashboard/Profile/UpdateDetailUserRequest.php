@@ -30,7 +30,7 @@ class UpdateDetailUserRequest extends FormRequest
     {
         return [
             'photo' => [
-                'nullable', 'fill', 'max:1024',
+                'nullable', 'filled', 'max:1024',
             ],
             'role' => [
                 'nullable', 'string', 'max:100',
@@ -39,7 +39,7 @@ class UpdateDetailUserRequest extends FormRequest
                 'required', 'regex:/^([0-9\s\-\+\(\)]*)$/', 'max:12',
             ],
             'biography' => [
-                'nullabel', 'string', 'max:5000',
+                'nullable', 'string', 'max:5000',
             ],
         ];
     }
