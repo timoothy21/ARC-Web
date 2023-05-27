@@ -2,7 +2,10 @@
 
 namespace App\Http\Requests\Dashboard\MyOrder;
 
+use App\Models\Order;
 use Illuminate\Foundation\Http\FormRequest;
+use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Validation\Rule;
 
 class UpdateMyOrderRequest extends FormRequest
 {
@@ -13,7 +16,7 @@ class UpdateMyOrderRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +27,27 @@ class UpdateMyOrderRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'buyer_id' => [
+                'nullable', 'integer',
+            ],
+            'freelancer_id' => [
+                'nullable', 'integer',
+            ],
+            'service_id' => [
+                'nullable', 'integer', 'max:255',
+            ],
+            'file' => [
+                'required', 'mimes:zip', 'max:1024',
+            ],
+            'note' => [
+                'required', 'string', 'max:10000',
+            ],
+            'expire' => [
+                'nullable', 'date',
+            ],
+            'order_status_id' => [
+                'nullable', 'integer',
+            ],
         ];
     }
 }
