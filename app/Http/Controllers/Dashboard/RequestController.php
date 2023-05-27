@@ -34,7 +34,7 @@ class RequestController extends Controller
      */
     public function index()
     {
-        $orders = Order::where('buyer_id', Auth::user()->id)->orerBy('created_at', 'desc')->get();
+        $orders = Order::where('buyer_id', Auth::user()->id)->orderBy('created_at', 'desc')->get();
         return view('pages.dashboard.request.index', compact('orders'));
     }
 
@@ -81,7 +81,7 @@ class RequestController extends Controller
     {
         return abort(404);
     }
-    
+
     /**
      * Update the specified resource in storage.
      *
