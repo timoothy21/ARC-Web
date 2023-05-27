@@ -1663,6 +1663,10 @@ select {
   height: 100vh;
 }
 
+.h-48 {
+  height: 12rem;
+}
+
 .min-h-\[85vh\] {
   min-height: 85vh;
 }
@@ -1940,6 +1944,10 @@ select {
 
 .items-center {
   align-items: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
 }
 
 .justify-end {
@@ -2339,6 +2347,11 @@ select {
 
 .bg-arc-bg\/50 {
   background-color: rgb(255 120 120 / 0.5);
+}
+
+.bg-arc-soft {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 236 226 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-25 {
@@ -2859,6 +2872,11 @@ select {
   color: rgb(255 255 255 / 0.8);
 }
 
+.text-slate-400 {
+  --tw-text-opacity: 1;
+  color: rgb(148 163 184 / var(--tw-text-opacity));
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -3369,6 +3387,10 @@ select {
     grid-column: span 4 / span 4;
   }
 
+  .sm\:m-0 {
+    margin: 0px;
+  }
+
   .sm\:-my-px {
     margin-top: -1px;
     margin-bottom: -1px;
@@ -3656,6 +3678,10 @@ select {
     margin-top: 1.5rem;
   }
 
+  .md\:mb-4 {
+    margin-bottom: 1rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -3676,12 +3702,20 @@ select {
     display: none;
   }
 
+  .md\:h-20 {
+    height: 5rem;
+  }
+
   .md\:w-48 {
     width: 12rem;
   }
 
   .md\:w-auto {
     width: auto;
+  }
+
+  .md\:w-20 {
+    width: 5rem;
   }
 
   .md\:grid-cols-12 {
@@ -3698,6 +3732,14 @@ select {
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:items-center {
+    align-items: center;
+  }
+
+  .md\:justify-center {
+    justify-content: center;
   }
 
   .md\:gap-6 {
@@ -3740,6 +3782,14 @@ select {
     padding-top: 0px;
   }
 
+  .md\:pb-4 {
+    padding-bottom: 1rem;
+  }
+
+  .md\:pl-4 {
+    padding-left: 1rem;
+  }
+
   .md\:text-right {
     text-align: right;
   }
@@ -3747,6 +3797,11 @@ select {
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }
 
@@ -3851,6 +3906,10 @@ select {
     flex-direction: row;
   }
 
+  .lg\:flex-col {
+    flex-direction: column;
+  }
+
   .lg\:items-start {
     align-items: flex-start;
   }
@@ -3861,6 +3920,10 @@ select {
 
   .lg\:justify-start {
     justify-content: flex-start;
+  }
+
+  .lg\:justify-end {
+    justify-content: flex-end;
   }
 
   .lg\:space-x-12 > :not([hidden]) ~ :not([hidden]) {
@@ -3948,5 +4011,17 @@ select {
 
   .lg\:leading-normal {
     line-height: 1.5;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .xl\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
