@@ -189,8 +189,17 @@
                             </table>
                         </div>
                         <div class="px-4 pb-4 booking">
-                            <a href="#" class="block px-12 py-4 my-2 text-lg font-semibold text-center text-white bg-serv-button rounded-xl">
-                                Booking Now
+                            @auth
+                                <a href="{{route('booking.landing', $service->id)}}" class="block px-12 py-4 my-2 text-lg font-semibold text-center text-white bg-serv-button rounded-xl">
+                                    Booking Now
+                                </a>
+                            @endauth
+                            @guest
+                                <a onclick="toggleModal('loginModal')" class="block px-12 py-4 my-2 text-lg font-semibold text-center text-white bg-serv-button rounded-xl">
+                                    Booking Now
+                                </a>
+                            @endguest
+
                             </a>
                         </div>
                     </div>
