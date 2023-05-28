@@ -2,19 +2,26 @@
 <aside class="z-20 flex-shrink-0 hidden w-64 overflow-y-auto bg-white md:block" aria-label="aside">
     <div class="text-serv-bg">
 
-        <div class="" href="#">
-            <img src="{{ asset('/assets/images/logo.svg')}}" alt="" class="object-center mx-auto my-8 ">
+        <div class="" href="">
+            <a href="{{route('index')}}">
+                <img src="{{ asset('/assets/images/brand-logo/logo-arc.png')}}" alt="" class="object-center mx-auto my-8 w-20">
+            </a>
         </div>
 
         <div class="flex items-center pt-8 pl-5 space-x-2 border-t border-gray-100">
             <!--Author's profile photo-->
-            <img class="object-cover object-center mr-1 rounded-full w-14 h-14"
-                src="{{ url('https://randomuser.me/api/portraits/men/1.jpg')}}" alt="random user" />
+            <!-- validation profile -->
+            @if(auth()->user()->detail_user()->first()->photo != null)
+                <img class="object-cover object-center mr-1 rounded-full w-14 h-14" src="{{ url(Storage::url(auth()->user()->detail_user()->first()->photo)) }}" alt="" loading="lazy">
+            @else
+                <!-- SVG -->
+            @endif
+
             <div>
                 <!--Author name-->
                 <p class="font-semibold text-gray-900 text-md">{{ Auth::user()->name }}</p>
                 <p class="text-sm font-light text-serv-text">
-                    Website Developer
+                    {{ auth()->user()->detail_user()->first()->role ?? ''}}
                 </p>
             </div>
         </div>
@@ -87,7 +94,7 @@
                     @endif
 
                     <span class="ml-4">My Services</span>
-                    <span class="inline-flex items-center justify-center px-3 py-2 ml-auto text-xs font-bold leading-none text-green-500 rounded-full bg-serv-green-badge">2</span>
+                    <span class="inline-flex items-center justify-center px-3 py-2 ml-auto text-xs font-bold leading-none text-green-500 rounded-full bg-serv-green-badge">{{ auth()->user()->service()->count() }}</span>
                 </a>
             </li>
 
@@ -116,7 +123,7 @@
                     @endif
 
                     <span class="ml-4">My Request</span>
-                    <span class="inline-flex items-center justify-center px-3 py-2 ml-auto text-xs font-bold leading-none text-green-500 rounded-full bg-serv-green-badge">3</span>
+                    <span class="inline-flex items-center justify-center px-3 py-2 ml-auto text-xs font-bold leading-none text-green-500 rounded-full bg-serv-green-badge">{{ auth()->user()->order_buyer()->count() }}</span>
                 </a>
             </li>
 
@@ -148,7 +155,7 @@
                     @endif
 
                     <span class="ml-4">My Orders</span>
-                    <span class="inline-flex items-center justify-center px-3 py-2 ml-auto text-xs font-bold leading-none text-green-500 rounded-full bg-serv-green-badge">10</span>
+                    <span class="inline-flex items-center justify-center px-3 py-2 ml-auto text-xs font-bold leading-none text-green-500 rounded-full bg-serv-green-badge">{{ auth()->user()->order_freelancer()->count() }}</span>
                 </a>
             </li>
 
