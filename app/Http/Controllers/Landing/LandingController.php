@@ -7,14 +7,12 @@ use Illuminate\Http\Request;
 
 use Auth;
 
-use App\Models\User;
 use App\Models\Order;
 use App\Models\Service;
 use App\Models\AdvantageUser;
 use App\Models\Tagline;
 use App\Models\AdvantageService;
 use App\Models\ThumbnailService;
-use App\Http\Controllers\Landing\toast;
 
 class LandingController extends Controller
 {
