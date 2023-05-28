@@ -22,7 +22,7 @@
                 </div>
 
                 {{-- container category + isi --}}
-                <div class="flex ">
+                <div class="flex">
                     {{-- buat category --}}
                     <div class="category-option">
                         <h2 class=" font-bold text-2xl">Category</h2>
@@ -31,22 +31,19 @@
                                 All Services
                             </a>
                             <a class="bg-arc-bg/10 text-black/80 block sm:inline-block my-1 py-2 px-8 font-medium rounded-xl" href="#">
-                                Programming & Tech
+                                Arsitek
                             </a>
                             <a class="bg-arc-bg/10 text-black/80 block sm:inline-block my-1 py-2 px-8 font-medium rounded-xl" href="#">
-                                Graphic Design
+                                Design Interior
                             </a>
                             <a class="bg-arc-bg/10 text-black/80 block sm:inline-block my-1 py-2 px-8 font-medium rounded-xl" href="#">
-                                Digital Marketing
-                            </a>
-                            <a class="bg-arc-bg/10 text-black/80 block sm:inline-block my-1 py-2 px-8 font-medium rounded-xl" href="#">
-                                Business
+                                Design and Build
                             </a>
                         </nav>
                     </div>
 
-                    <div class="content-isi">
-                        <div class="grid grid-cols lg:grid-cols-3 md:grid-cols-2 gap-4">
+                    <div class="content-isi w-5/6">
+                        <div class="grid grid-cols lg:grid-cols-2 md:grid-cols-2 gap-4">
                             @forelse ($services as $item)
                                 @include('components.landing.service')
                             @empty

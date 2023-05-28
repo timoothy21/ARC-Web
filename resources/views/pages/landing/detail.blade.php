@@ -6,7 +6,7 @@
 
     <div>
         <!-- breadcrumb -->
-        <nav class="mx-8 mt-8 text-sm lg:mx-20" aria-label="Breadcrumb">
+        {{-- <nav class="mx-8 mt-8 text-sm lg:mx-20" aria-label="Breadcrumb">
             <ol class="inline-flex p-0 list-none">
                 <li class="flex items-center">
                     <a href="#" class="text-gray-400">Programming & Tech</a>
@@ -18,7 +18,7 @@
                     <a href="#" class="font-medium">Website Developer</a>
                 </li>
             </ol>
-        </nav>
+        </nav> --}}
     </div>
 
     <!-- Detail -->
@@ -142,9 +142,18 @@
                             </div>
                             <div x-show.transition.duration.500ms="tab === 'reviews'">
                                 <h2 class="mb-4 text-xl font-semibold"><span class="text-serv-button">210</span> Happy Clients</h2>
+                                {{-- @forelse ($review as $item) --}}
                                 @include('components.landing.review')
-                                @include('components.landing.review')
-                                @include('components.landing.review')
+
+                                {{-- @empty --}}
+                                {{-- empty --}}
+
+                                {{-- @endforelse --}}
+                                <div class="text-center mt-10">
+                                    <a class="bg-arc-bg text-white block sm:inline-block my-2 py-2 px-8 mx-4 font-medium rounded-xl" href="#">
+                                        Load More
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -181,7 +190,7 @@
                                     <circle cx="12" cy="12" r="8" stroke="#082431" stroke-width="1.5" />
                                     <path d="M12 7V12L15 13.5" stroke="#082431" stroke-width="1.5" stroke-linecap="round" />
                                 </svg>
-                                {{ $service->deliver_time ?? '' }} Days Delivery
+                                {{ $service->delivery_time ?? '' }} Days Delivery
                             </div>
                             <div class="flex-1 text-sm font-medium text-center">
                                 <svg class="inline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -195,22 +204,22 @@
                             </div>
                         </div>
                         <div class="px-4 pt-4 pb-2 features-list">
-                            <ul class="mb-4 text-sm list-check">
+                            {{-- <ul class="mb-4 text-sm list-check">
                                 <li class="pl-10 my-4">3 Pages</li>
                                 <li class="pl-10 my-4">Customized Design</li>
                                 <li class="pl-10 my-4">Responsive Design</li>
                                 <li class="pl-10 my-4">3 Plugins/Extensions</li>
                                 <li class="pl-10 my-4">E-Commerce Functionality</li>
-                            </ul>
+                            </ul> --}}
                         </div>
                         <div class="px-4">
                             <table class="w-full mb-4">
                                 <tr>
                                     <td class="text-sm leading-7 text-serv-text">
-                                        Price starts test test
+                                        Price starts from:
                                     </td>
                                     <td class="mb-4 text-xl font-semibold text-right text-serv-button">
-                                        {{ 'Rp. '.number_format($service->price) ?? ''}}
+                                        {{ 'Rp'.number_format($service->price) ?? ''}}
                                     </td>
                                 </tr>
 
@@ -219,13 +228,13 @@
                         <div class="px-4 pb-4 booking">
 
                             @guest
-                            <a onclick="toggleModal('loginModal')" class="block px-12 py-4 my-2 text-lg font-semibold text-center text-white bg-serv-button rounded-xl">
+                            <a onclick="toggleModal('loginModal')" class="block px-12 py-4 my-2 text-lg font-semibold text-center text-white bg-arc-bg rounded-xl">
                                 Booking Now
                             </a>
                             @endguest
 
                             @auth
-                            <a href="{{ route('booking.landing', $service->id) }}" class="block px-12 py-4 my-2 text-lg font-semibold text-center text-white bg-serv-button rounded-xl">
+                            <a href="{{ route('booking.landing', $service->id) }}" class="block px-12 py-4 my-2 text-lg font-semibold text-center text-white bg-arc-bg rounded-xl">
                                 Booking Now
                             </a>
                             @endauth
@@ -244,7 +253,7 @@
     <script>
         function gallery(){
             return {
-                featured: 'https://source.unsplash.com/_SgRNwAVNKw/1600x900/',
+                featured: 'https://alacasa.id/lkgallery/teaser/a150202ad95ca7f9c16afcfe7e16bbc3_33_20190118185600jGwhVM.jpg',
                 active: 1,
                 changeThumbnail: function(url, position) {
                     this.featured = url;

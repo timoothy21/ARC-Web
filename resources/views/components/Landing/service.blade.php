@@ -5,8 +5,8 @@
             @if ($item->user->detail_user->photo != NULL)
                 <img class="w-14 h-14 object-cover rounded-full mr-1" src="{{url(Storage::url($item->user->detail_user->photo))}}" alt="photo arsitek" loading="lazy">
             @else
-                <svg>
-
+                <svg class="object-cover w-14 h-14 rounded text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
                 </svg>
             @endif
 
@@ -22,7 +22,7 @@
         <!--Banner image-->
 
         @if ($item->thumbnail_service[0]->thumbnail != NULL)
-            <img class="rounded-2xl object-cover h-48 w-full" src="{{url(Storage::url($item->thumbnail_service[0]->thumbnail))}}" alt="photo arsitek" loading="lazy">
+            <img class="rounded-2xl object-cover h-48 w-full" src="{{url(Storage::url($item->thumbnail_service[0]->thumbnail))}}" alt="thumbnail service" loading="lazy">
         @else
             <img class="rounded-2xl w-full" src="{{ url('https://via.placeholder.com/750x500')}}" alt="placeholder" />
         @endif
@@ -45,7 +45,7 @@
             </span>
             <span
                 class="text-serv-button inline-flex items-center leading-none text-md font-semibold">
-                {{number_format($item->price) ?? ''}}
+                {{'Rp' .number_format($item->price) ?? ''}}
             </span>
         </div>
     </div>
