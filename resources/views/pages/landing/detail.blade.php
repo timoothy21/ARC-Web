@@ -207,7 +207,7 @@
                             <table class="w-full mb-4">
                                 <tr>
                                     <td class="text-sm leading-7 text-serv-text">
-                                        Price starts from:
+                                        Price starts test test
                                     </td>
                                     <td class="mb-4 text-xl font-semibold text-right text-serv-button">
                                         {{ 'Rp. '.number_format($service->price) ?? ''}}
@@ -217,17 +217,19 @@
                             </table>
                         </div>
                         <div class="px-4 pb-4 booking">
-                            @auth
+
+                            @guest
                             <a onclick="toggleModal('loginModal')" class="block px-12 py-4 my-2 text-lg font-semibold text-center text-white bg-serv-button rounded-xl">
+                                Booking Now
+                            </a>
+                            @endguest
+
+                            @auth
+                            <a href="{{ route('booking.landing', $service->id) }}" class="block px-12 py-4 my-2 text-lg font-semibold text-center text-white bg-serv-button rounded-xl">
                                 Booking Now
                             </a>
                             @endauth
 
-                            @guest
-                            <a href="" class="block px-12 py-4 my-2 text-lg font-semibold text-center text-white bg-serv-button rounded-xl">
-                                Booking Now
-                            </a>
-                            @endguest
                         </div>
                     </div>
                 </aside>

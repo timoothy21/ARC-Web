@@ -146,7 +146,7 @@
             </h2>
 
             <div class="relative mt-0 md:mt-6">
-                <a href="{{ route('index.dashboard') }}" class="px-4 py-2 mt-2 text-left text-white rounded-xl bg-serv-button">
+                <a href="{{ route('member.dashboard.index') }}" class="px-4 py-2 mt-2 text-left text-white rounded-xl bg-serv-button">
                     Dashboard
                 </a>
             </div>
