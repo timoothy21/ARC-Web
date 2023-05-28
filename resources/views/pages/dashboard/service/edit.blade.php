@@ -93,26 +93,21 @@
                                         </div>
 
                                         <div class="col-span-6 sm:col-span-3">
-                                            <select id="delivery_time" name="delivery_time" autocomplete="delivery_time" class="block w-full px-3 py-3 pr-10 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                                                <option>Butuh Berapa hari service kamu selesai?</option>
-                                                <option value="2" {{ $service->delivery_time == '2' ? 'selected' : ''}}>2 Hari</option>
-                                                <option value="4" {{ $service->delivery_time == '4' ? 'selected' : ''}}>4 Hari</option>
-                                                <option value="8" {{ $service->delivery_time == '8' ? 'selected' : ''}}>8 Hari</option>
-                                                <option value="16" {{ $service->delivery_time == '16' ? 'selected' : ''}}>16 Hari</option>
-                                                <option value="32" {{ $service->delivery_time == '32' ? 'selected' : ''}}>32 Hari</option>
-                                            </select>
+                                            <input placeholder="Butuh Berapa hari service kamu selesai?" type="number" name="delivery_time" id="delivery_time" autocomplete="delivery_time" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{ $service->delivery_time ?? ''}}" required>
+                                            @if($errors->has('delivery_time'))
+                                                <p class="text-red-500 mb-3 text-sm">
+                                                    {{ $errors->first('delivery_time') }}
+                                                </p>
+                                            @endif
                                         </div>
 
                                         <div class="col-span-6 sm:col-span-3">
-                                            <select id="revision_limit" name="revision_limit" autocomplete="revision_limit" class="block w-full px-3 py-3 pr-10 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
-                                                <option>Maksimal Revisi service kamu</option>
-                                                <option>Butuh Berapa hari service kamu selesai?</option>
-                                                <option value="2" {{ $service->revision_limit == '2' ? 'selected' : ''}}>2 revisi</option>
-                                                <option value="5" {{ $service->revision_limit == '5' ? 'selected' : ''}}>5 revisi</option>
-                                                <option value="7" {{ $service->revision_limit == '7' ? 'selected' : ''}}>7 revisi</option>
-                                                <option value="10" {{ $service->revision_limit == '10' ? 'selected' : ''}}>10 revisi</option>
-                                                <option value="12" {{ $service->revision_limit == '12' ? 'selected' : ''}}>12 revisi</option>
-                                            </select>
+                                            <input placeholder="Maksimal Revisi" type="number" name="revision_limit" id="revision_limit" autocomplete="revision_limit" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{  $service->revision_limit ?? ''}}" required>
+                                            @if($errors->has('revision_limit'))
+                                                <p class="text-red-500 mb-3 text-sm">
+                                                    {{ $errors->first('revision_limit') }}
+                                                </p>
+                                            @endif
                                         </div>
 
                                         <div class="col-span-6">
@@ -140,9 +135,13 @@
 
                                         <div class="col-span-6">
                                             <label for="service-name" class="block mb-3 font-medium text-gray-700 text-md">Keunggulan kamu</label>
-                                            <input placeholder="Keunggulan 1" type="text" name="service-name" id="service-name" autocomplete="service-name" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm">
-                                            <input placeholder="Keunggulan 2" type="text" name="service-name" id="service-name" autocomplete="service-name" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm">
-                                            <input placeholder="Keunggulan 3" type="text" name="service-name" id="service-name" autocomplete="service-name" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm">
+
+                                            @forelse ($advantage_user as $advantage_item)
+                                            <input placeholder="Keunggulan" type="text" name="{{ ('advantage-user['.$advantage_item->id.']') }}" id="service-name" autocomplete="service-name" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm " value="{{ $advantage_item->advantage ?? '' }}">
+                                            @empty
+                                                {{-- empty --}}
+                                            @endforelse
+
                                             <div id="newAdvantagesRow"></div>
                                             <button type="button" class="inline-flex justify-center px-3 py-2 mt-3 text-xs font-medium text-gray-700 bg-gray-100 border border-transparent rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500" id="addAdvantagesRow">
                                                 Tambahkan Keunggulan +
@@ -150,12 +149,22 @@
                                         </div>
 
                                         <div class="col-span-6">
-                                            <label for="service-name" class="block mb-3 font-medium text-gray-700 text-md">Note <span class="text-gray-400">(Optional)</span></label>
-                                            <input placeholder="Hal yang ingin disampaikan oleh kamu?" type="text" name="service-name" id="service-name" autocomplete="service-name" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm">
+                                            <label for="service-name" class="block mb-3 font-medium text-gray-700 text-md">Note <span class="text-gray-400"> </span></label>
+                                            <input placeholder="Hal yang ingin disampaikan oleh kamu?" type="text" name="note" id="note" autocomplete="note" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{ $service->note ?? ''}}">
+
+                                            <!-- @if($errors->has('note'))
+                                                <p class="text-red-500 mb-3 text-sm">{{ $errors->first('note') }}</p>
+                                            @endif -->
                                         </div>
 
                                         <div class="col-span-6">
-                                            <label for="service-name" class="block mb-3 font-medium text-gray-700 text-md">Tagline <span class="text-gray-400">(Optional)</span></label>
+                                            <label for="service-name" class="block mb-3 font-medium text-gray-700 text-md">Tagline <span class="text-gray-400"></span></label>
+                                            @forelse ($tagline as $item)
+                                            <input placeholder="Tagline" type="text" name="{{('tagline['.$item->id.']')}}" id="tagline" autocomplete="tagline" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{ $item->tagline ?? ''}}">
+                                            @empty
+                                                {{-- empty --}}
+                                            @endforelse
+
                                             <div id="newTaglineRow"></div>
                                             <button type="button" class="inline-flex justify-center px-3 py-2 mt-3 text-xs font-medium text-gray-700 bg-gray-100 border border-transparent rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500" id="addTaglineRow">
                                                 Tambahkan Tagline +

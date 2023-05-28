@@ -68,9 +68,7 @@
                                             <p class="block mb-3 text-sm text-gray-700">
                                                 Hal apa aja yang didapakan dari service kamu?
                                             </p>
-                                            <input placeholder="Keunggulan 1" type="text" name="advantage-service[]" id="addvantage-service" autocomplete="addvantage-service" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{ old('advantage-service[]') }}" required>
-                                            <input placeholder="Keunggulan 2" type="text" name="advantage-service[]" id="addvantage-service" autocomplete="addvantage-service" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{ old('advantage-service[]') }}" required>
-                                            <input placeholder="Keunggulan 3" type="text" name="advantage-service[]" id="addvantage-service" autocomplete="addvantage-service" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{ old('advantage-service[]') }}" required>
+                                            <input placeholder="Keunggulan Service" type="text" name="advantage-service[]" id="addvantage-service" autocomplete="addvantage-service" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{ old('advantage-service[]') }}" required>
                                             <div id="newServicesRow"></div>
                                             <button type="button" class="inline-flex justify-center px-3 py-2 mt-3 text-xs font-medium text-gray-700 bg-gray-100 border border-transparent rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500" id="addServicesRow">
                                                 Tambahkan Keunggulan +
@@ -80,14 +78,7 @@
                                             <label for="estimation & revision" class="block mb-3 font-medium text-gray-700 text-md">Estimasi Service & Jumlah Revisi</label>
                                         </div>
                                         <div class="col-span-6 sm:col-span-3">
-                                            <select id="delivery_time" name="delivery_time" autocomplete="estimation" class="block w-full px-3 py-3 pr-10 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
-                                                <option>Butuh Berapa hari service kamu selesai?</option>
-                                                <option value="2">2 hari</option>
-                                                <option value="4">4 hari</option>
-                                                <option value="8">8 hari</option>
-                                                <option value="16">16 hari</option>
-                                                <option value="32">32 hari</option>
-                                            </select>
+                                            <input placeholder="Butuh Berapa hari service kamu selesai?" type="number" name="delivery_time" id="delivery_time" autocomplete="delivery_time" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{ old('delivery_time') }}" required>
 
                                             @if($errors->has('delivery-time'))
                                             <p class="text-red-500 mb-3 text-sm">{{ $errors->first('delivery-time') }}</p>
@@ -95,14 +86,7 @@
 
                                         </div>
                                         <div class="col-span-6 sm:col-span-3">
-                                            <select id="revision_limit" name="revision_limit" autocomplete="revision_limit" class="block w-full px-3 py-3 pr-10 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
-                                                <option>Maksimal Revisi service kamu</option>
-                                                <option value="2">2 Revisi</option>
-                                                <option value="5">5 Revisi</option>
-                                                <option value="7">7 Revisi</option>
-                                                <option value="10">10 Revisi</option>
-                                                <option value="12">12 Revisi</option>
-                                            </select>
+                                            <input placeholder="Maksimal Revisi" type="number" name="revision_limit" id="revision_limit" autocomplete="revision_limit" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{ old('revision_limit') }}" required>
 
                                             @if($errors->has('revision-limit'))
                                             <p class="text-red-500 mb-3 text-sm">{{ $errors->first('revision-limit') }}</p>
@@ -118,9 +102,7 @@
                                         </div>
                                         <div class="col-span-6">
                                             <label for="thumbnail-service" class="block mb-3 font-medium text-gray-700 text-md">Thumbnail Service Feeds</label>
-                                            <input placeholder="Thumbnail 1" type="file" name="thumbnail[]" id="thumbnail" autocomplete="thumbnail" class="block w-full py-3 pl-5 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm">
-                                            <input placeholder="Thumbnail 2" type="file" name="thumbnail[]" id="thumbnail" autocomplete="thumbnail" class="block w-full py-3 pl-5 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm">
-                                            <input placeholder="Thumbnail 3" type="file" name="thumbnail[]" id="thumbnail" autocomplete="thumbnail" class="block w-full py-3 pl-5 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm">
+                                            <input placeholder="Thumbnail" type="file" name="thumbnail[]" id="thumbnail" autocomplete="thumbnail" class="block w-full py-3 pl-5 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm">
                                             <div id="newThumbnailRow"></div>
                                             <button type="button" class="inline-flex justify-center px-3 py-2 mt-3 text-xs font-medium text-gray-700 bg-gray-100 border border-transparent rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500" id="addThumbnailRow">
                                                 Tambahkan Gambar +
@@ -128,16 +110,14 @@
                                         </div>
                                         <div class="col-span-6">
                                             <label for="advantage_user" class="block mb-3 font-medium text-gray-700 text-md">Keunggulan kamu</label>
-                                            <input placeholder="Keunggulan 1" type="text" name="advantage-user[]" id="advantage_user" autocomplete="advantage_user" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{old('advantage-user[]')}}" required>
-                                            <input placeholder="Keunggulan 2" type="text" name="advantage-user[]" id="advantage_user" autocomplete="advantage_user" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{old('advantage-user[]')}}" required>
-                                            <input placeholder="Keunggulan 3" type="text" name="advantage-user[]" id="advantage_user" autocomplete="advantage_user" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{old('advantage-user[]')}}" required>
+                                            <input placeholder="Keunggulan" type="text" name="advantage-user[]" id="advantage_user" autocomplete="advantage_user" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{old('advantage-user[]')}}" required>
                                             <div id="newAdvantagesRow"></div>
                                             <button type="button" class="inline-flex justify-center px-3 py-2 mt-3 text-xs font-medium text-gray-700 bg-gray-100 border border-transparent rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500" id="addAdvantagesRow">
                                                 Tambahkan Keunggulan +
                                             </button>
                                         </div>
                                         <div class="col-span-6">
-                                            <label for="note" class="block mb-3 font-medium text-gray-700 text-md">Note <span class="text-gray-400">(Optional)</span></label>
+                                            <label for="note" class="block mb-3 font-medium text-gray-700 text-md">Note <span class="text-gray-400"></span></label>
                                             <input placeholder="Hal yang ingin disampaikan oleh kamu?" type="text" name="note" id="note" autocomplete="note" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{ old('note')}}">
 
                                             <!-- @if($errors->has('note'))
@@ -146,7 +126,7 @@
 
                                         </div>
                                         <div class="col-span-6">
-                                            <label for="service-name" class="block mb-3 font-medium text-gray-700 text-md">Tagline <span class="text-gray-400">(Optional)</span></label>
+                                            <label for="service-name" class="block mb-3 font-medium text-gray-700 text-md">Tagline <span class="text-gray-400"></span></label>
                                             <div id="newTaglineRow"></div>
                                             <button type="button" class="inline-flex justify-center px-3 py-2 mt-3 text-xs font-medium text-gray-700 bg-gray-100 border border-transparent rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500" id="addTaglineRow">
                                                 Tambahkan Tagline +
@@ -180,7 +160,7 @@
         // add row
         $("#addAdvantagesRow").click(function() {
             var html = '';
-            html += '<input placeholder="Keunggulan Kamu" type="text" name="advantage-user[]" id="advantage-user" autocomplete="advantage-user" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" required>';
+            html += '<input placeholder="Keunggulan" type="text" name="advantage-user[]" id="advantage_user" autocomplete="advantage_user" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{old('advantage-user[]')}}" required>';
 
             $('#newAdvantagesRow').append(html);
         });
@@ -195,7 +175,7 @@
         // add row
         $("#addServicesRow").click(function() {
             var html = '';
-            html += '<input placeholder="Keunggulan Service" type="text" name="service-service[]" id="advantage-service" autocomplete="service-name" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" required>';
+            html += '<input placeholder="Keunggulan Service" type="text" name="advantage-service[]" id="addvantage-service" autocomplete="addvantage-service" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{ old('advantage-service[]') }}" required>';
 
             $('#newServicesRow').append(html);
         });
@@ -225,7 +205,7 @@
         // add row
         $("#addThumbnailRow").click(function() {
             var html = '';
-            html += '<input placeholder="Keunggulan 3" type="file" name="thumbnail[]" id="thumbnail" autocomplete="thumbnail" class="block w-full py-3 pl-5 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" required>';
+            html += '<input placeholder="Thumbnail" type="file" name="thumbnail[]" id="thumbnail" autocomplete="thumbnail" class="block w-full py-3 pl-5 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm">';
 
             $('#newThumbnailRow').append(html);
         });
