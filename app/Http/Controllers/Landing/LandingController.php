@@ -145,3 +145,4 @@ class LandingController extends Controller
         return view('pages.landing.booking', compact($order));
     }
 }
+

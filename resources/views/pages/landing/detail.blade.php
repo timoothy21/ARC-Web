@@ -63,8 +63,8 @@
                                 </div>
                                 <h3 class="my-4 text-lg font-semibold">Why choose my Service?</h3>
                                 <ul class="mb-4 list-check">
-                                    @forelse ($advantage_service as $advantage_service_item)
-                                        <li class="pl-10 y-2">{{ $advantage_service_item->$advantage ?? '' }}</li>
+                                    @forelse ($advantage_service as $item)
+                                        <li class="pl-10 y-2">{{ $item->advantage ?? '' }}</li>
                                     @empty
                                         {{-- empty --}}
                                     @endforelse
