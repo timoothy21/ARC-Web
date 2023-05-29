@@ -71,7 +71,7 @@
                                 </div>
                                 <p class="mt-2 text-2xl font-semibold text-left text-gray-800">{{ $freelancer ?? '' }}</p>
                                 <p class="text-sm text-left text-gray-500">
-                                    New Freelancer <br class="hidden lg:block">
+                                    New Seller <br class="hidden lg:block">
                                     Work for You
                                 </p>
                             </div>
@@ -172,7 +172,7 @@
                         </table>
                     </div>
                 </main>
-                <aside class="p-4 lg:col-span-5 md:col-span-12 md:pt-0">
+                {{-- <aside class="p-4 lg:col-span-5 md:col-span-12 md:pt-0">
                     <div class="relative w-full h-56 m-auto text-white transition-transform transform bg-red-100 rounded-xl">
 
                         <img class="relative object-cover w-full h-full rounded-xl" src="{{ asset('/assets/images/card-background.png') }}" alt="">
@@ -322,7 +322,7 @@
                             </tbody>
                         </table>
                     </div>
-                </aside>
+                </aside> --}}
             </div>
         </section>
     </main>
