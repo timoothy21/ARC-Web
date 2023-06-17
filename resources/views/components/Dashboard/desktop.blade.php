@@ -11,11 +11,11 @@
         <div class="flex items-center pt-8 pl-5 space-x-2 border-t border-gray-100">
             <!--Author's profile photo-->
             <!-- validation profile -->
-            @if(auth()->user()->detail_user()->first()->photo != null)
-                <img class="object-cover object-center mr-1 rounded-full w-14 h-14" src="{{ url(Storage::url(auth()->user()->detail_user()->first()->photo)) }}" alt="" loading="lazy">
-            @else
+            {{-- @if(auth()->user()->detail_user()->first()->photo != null)
+                {{-- <img class="object-cover object-center mr-1 rounded-full w-14 h-14" src="{{ url(Storage::url(auth()->user()->detail_user()->first()->photo)) }}" alt="" loading="lazy"> --}}
+            {{-- @else --}}
                 <!-- SVG -->
-            @endif
+            {{-- @endif --}}
 
             <div>
                 <!--Author name-->

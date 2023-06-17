@@ -97,7 +97,7 @@
             <!-- Atas Column -->
             <!-- <div class="w-full lg:w-1/2 text-center justify-center flex lg:mb-0 mb-12">
                 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" data-lity>
-                    <img id="hero" src="{{ asset('/assets/images/video-placeholder.png')}}" alt="" class="p-5" />
+                    {{-- <img id="hero" src="{{ asset('/assets/images/video-placeholder.png')}}" alt="" class="p-5" /> --}}
                 </a>
             </div> -->
 
@@ -110,8 +110,9 @@
                 <div class="w-3/4  bg-arc-soft/40 flex-col rounded-lg py-8 items-start justify-start mx-auto px-10 shadow-md">
 
                     <div class="container flex items-center pb-6 md:pb-4">
-                        <div class="hidden md:flex md:justify-center md:items-center md:w-20 md:h-20">
-                            <img src="{{ asset('/assets/Profil pic1.png')}}" alt="">
+                        <div class="hidden rounded-full md:flex md:justify-center md:items-center md:w-20 md:h-20">
+                            <img width="250" height="250"
+                            src="{{ url('https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bWFsZSUyMHByb2ZpbGV8ZW58MHx8MHx8fDA%3D&w=1000&q=80')}}" alt="">
                         </div>
 
                         <div class="flex-row justify-center items-center md:pl-4 xl:text-xl sm:text-sm">
@@ -124,7 +125,7 @@
 
                     <div class="container flex items-center pb-6 md:pb-4">
                         <div class="hidden md:flex md:justify-center md:items-center md:w-20 md:h-20">
-                            <img src="{{ asset('/assets/Profil pic2.png')}}" alt="">
+                            <img src="{{ url('https://img.freepik.com/free-photo/portrait-happy-young-woman-looking-camera_23-2147892777.jpg')}}" alt="">
                         </div>
 
                         <div class="flex-row justify-center items-center md:pl-4 xl:text-xl sm:text-sm">
