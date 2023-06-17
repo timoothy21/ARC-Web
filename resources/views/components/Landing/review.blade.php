@@ -1,9 +1,9 @@
 <div class="flex border border-serv-testimonial-border rounded-lg mb-4"><!--horizantil margin is just for display-->
     <div class="flex items-start px-4 py-6">
-        <img class="w-16 h-16 rounded-full object-cover mr-4" src="{{ url('https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')}}" alt="avatar">
+        <img class="w-16 h-16 rounded-full object-cover mr-4" src="{{ url('https://www.freeiconspng.com/thumbs/profile-icon-png/profile-icon-9.png')}}" alt="avatar">
         <div class="w-full">
             <div class="flex items-center justify-between">
-                <h2 class="text-xl font-medium text-serv-bg my-1">Farzhan Pill</h2>
+                <h2 class="text-xl font-medium text-serv-bg my-1">Dimsgan</h2>
             </div>
             <p class="text-md">
                 <svg width="14" height="13" viewBox="0 0 14 13" fill="none" class="inline align-baseline" xmlns="http://www.w3.org/2000/svg">
@@ -24,9 +24,7 @@
                 <span class="text-serv-yellow font-medium">5</span>
             </p>
             <p class="mt-3 text-gray-700 text-md leading-8">
-            He is a very competent , communicative and well-experienced, remarkable funnel builder.
-            I just love my funnel and every page of it. He always does what he says he can do and
-            I would love to do future projects with him! 👍
+                recommended gan
             </p>
             <div class="mt-4 flex items-center">
                 <div class="flex mr-2 text-serv-text text-md">

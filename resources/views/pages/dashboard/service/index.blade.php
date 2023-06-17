@@ -62,10 +62,7 @@
 
                                                     </div>
                                                     <div>
-                                                        <a href="{{'#'}}" class="font-medium text-black">
-                                                            {{ $service->title ?? ''}}
-                                                        </a>
-                                                        <a href="#" class="font-medium text-black">
+                                                        <a href="{{route('detail.landing', $service['id'])}}" class="font-medium text-black">
                                                             {{ $service->title ?? ''}}
                                                         </a>
                                                     </div>
@@ -101,7 +98,7 @@
             <div class="m-auto text-center">
                 <img src="{{ asset('/assets/images/empty-illustration.svg')}}" alt="" class="w-48 mx-auto">
                 <h2 class="mt-8 mb-1 text-2xl font-semibold text-gray-700">
-                    There is No Requests Yet
+                    There is No Service Yet
                 </h2>
                 <p class="text-sm text-gray-400">
                     It seems that you haven’t provided any service. <br>

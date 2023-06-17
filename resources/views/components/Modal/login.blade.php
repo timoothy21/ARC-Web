@@ -6,8 +6,8 @@
 
             <!--header-->
             <div class="p-5 rounded-t-xl text-center mt-5 mx-10">
-                <h3 class="text-2xl font-semibold">
-                    Log in to Serv
+                <h3 class="text-2xl font-semibold text-black">
+                    Sign in to ARC Platform
                 </h3>
                 <p class="text-gray-400 mt-1 text-sm">
                     Enter your email & password to continue
@@ -49,10 +49,10 @@
                     <div class="flex items-center justify-between">
                         <div class="inline-block text-xs text-gray-400">
                             <label class="inline-flex items-center mt-3">
-                                <input type="checkbox" class="form-checkbox h-5 w-5 text-serv-button rounded border-serv-text"><span class="ml-2 text-gray-400">Remember me</span>
+                                <input type="checkbox" class="form-checkbox h-5 w-5 text-arc-bg rounded border-serv-text"><span class="ml-2 text-gray-400">Remember me</span>
                             </label>
                         </div>
-                        <a class="inline-block align-baseline text-xs text-serv-button mt-2 font-medium" href="#">
+                        <a class="inline-block align-baseline text-xs text-arc-bg mt-2 font-medium" href="#">
                             Forgot Password?
                         </a>
                     </div>
@@ -63,12 +63,12 @@
                 <div class="px-6 pb-6 rounded-b-xl mx-10">
                     <input type="hidden" name="auth" value="true">
 
-                    <button class="bg-serv-button text-white text-lg py-3 px-12 my-2 rounded-lg w-full" type="submit">
-                        Log in
+                    <button class="bg-arc-bg text-white text-lg py-3 px-12 my-2 rounded-lg w-full" type="submit">
+                        Sign in
                     </button>
 
                     <p href="#" class="text-center py-5">
-                        Dont have account? <a href="#" class="text-serv-button" onclick="toggleModal('loginModal');toggleModal('registerModal') ">Sign up</a>
+                        Dont have account? <a href="#" class="text-arc-bg" onclick="toggleModal('loginModal');toggleModal('registerModal') ">Sign up</a>
                     </p>
                 </div>
             </form>
