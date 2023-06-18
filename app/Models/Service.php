@@ -33,27 +33,34 @@ class Service extends Model
     ];
 
     // one to many
-    public function user() {
+    public function user()
+    {
         return $this->belongsTo('App\Models\User', 'users_id', 'id');
     }
 
-    public function advantage_user() {
+    public function advantage_user()
+    {
         return $this->hasMany('App\Models\AdvantageUser', 'service_id');
     }
 
-    public function advantage_service() {
+    public function advantage_service()
+    {
         return $this->hasMany('App\Models\AdvantageService', 'service_id');
     }
 
-    public function thumbnail_service() {
+    public function thumbnail_service()
+    {
         return $this->hasMany('App\Models\ThumbnailService', 'service_id');
     }
 
-    public function tagline() {
+    public function tagline()
+    {
         return $this->hasMany('App\Models\Tagline', 'service_id');
     }
 
-    public function order() {
+    public function order()
+    {
         return $this->hasMany('App\Models\Order', 'service_id');
     }
+
 }

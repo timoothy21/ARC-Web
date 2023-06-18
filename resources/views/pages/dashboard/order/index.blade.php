@@ -55,8 +55,8 @@
                                                     <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
                                                 </div>
                                                 <div>
-                                                    <p class="font-medium text-black">{{ $order->user_freelancer->name ?? '' }}</p>
-                                                    <p class="text-sm text-gray-400">{{ $order->user_freelancer->detail_user->role ?? '' }}</p>
+                                                    <p class="font-medium text-black">{{ $order->user_buyer->name ?? '' }}</p>
+                                                    <p class="text-sm text-gray-400">{{ $order->user_buyer->detail_user->role ?? '' }}</p>
                                                 </div>
                                             </div>
                                         </td>

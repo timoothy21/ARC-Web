@@ -29,7 +29,7 @@
                             <table class="w-full" aria-label="Table">
                                 <thead>
                                     <tr class="text-sm font-normal text-left text-gray-900 border-b border-b-gray-600">
-                                        <th class="py-4" scope="">Freelancer Name</th>
+                                        <th class="py-4" scope="">Seller Name</th>
                                         <th class="py-4" scope="">Service Details</th>
                                         <th class="py-4" scope="">Price</th>
                                         <th class="py-4" scope="">Status</th>
