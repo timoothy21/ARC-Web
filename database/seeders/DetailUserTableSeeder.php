@@ -19,7 +19,7 @@ class DetailUserTableSeeder extends Seeder
             [
                 'users_id' => 1,
                 'photo' => '',
-                'role' => 'Website Developer',
+                'role' => 'Admin',
                 'contact_number' => '',
                 'biography' => '',
                 'created_at' => date('Y-m-d h:i:s'),
@@ -28,7 +28,16 @@ class DetailUserTableSeeder extends Seeder
             [
                 'users_id' => 2,
                 'photo' => '',
-                'role' => 'UI Designer',
+                'role' => 'Arsitek',
+                'contact_number' => '',
+                'biography' => '',
+                'created_at' => date('Y-m-d h:i:s'),
+                'updated_at' => date('Y-m-d h:i:s'),
+            ],
+            [
+                'users_id' => 3,
+                'photo' => '',
+                'role' => 'Client',
                 'contact_number' => '',
                 'biography' => '',
                 'created_at' => date('Y-m-d h:i:s'),

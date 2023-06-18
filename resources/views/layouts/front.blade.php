@@ -3,7 +3,7 @@
 <head>
     @include('includes.landing.meta')
 
-    <title>@yield('title') | ARC</title>
+    <title>@yield('title') | ARC </title>
 
     @stack('before-style')
 
