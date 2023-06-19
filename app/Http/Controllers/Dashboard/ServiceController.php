@@ -262,7 +262,7 @@ class ServiceController extends Controller
             }
         }
         echo "hai6";
-        var_dump($data);
+        // var_dump($data);
         // update to thumbnail service
         $existingThumbnail = $service->thumbnail_service()->pluck('id')->toArray();
         $thumbnailsToDelete = array_slice($existingThumbnail, 1);

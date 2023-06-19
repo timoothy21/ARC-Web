@@ -13,6 +13,7 @@ use App\Models\AdvantageUser;
 use App\Models\Tagline;
 use App\Models\AdvantageService;
 use App\Models\ThumbnailService;
+use App\Models\User;
 
 class LandingController extends Controller
 {
