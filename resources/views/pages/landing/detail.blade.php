@@ -102,7 +102,7 @@
                                                 {{ $service->user->name ?? '' }}
                                             </div>
                                             <div class="text-gray-400">
-                                                Bandung, Indonesia
+                                                {{ $service->user->detail_user->contact_number ?? ''}}
                                             </div>
                                         </div>
                                     </div>

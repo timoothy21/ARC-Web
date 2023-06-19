@@ -48,7 +48,7 @@
 
                                 <!-- details heading -->
                                 <div class="details-heading">
-                                    <h1 class="text-2xl font-semibold">I Will Design WordPress eCommerce Modules</h1>
+                                    <h1 class="text-2xl font-semibold">{{ $service->title ?? ''}}</h1>
                                     <div class="my-3">
                                         @include('components.dashboard.rating')
                                     </div>

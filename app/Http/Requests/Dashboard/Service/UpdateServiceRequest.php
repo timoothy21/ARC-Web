@@ -4,7 +4,7 @@ namespace App\Http\Requests\Dashboard\Service;
 
 use App\Models\Service;
 use Illuminate\Foundation\Http\FormRequest;
-use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundaation\Response;
 use Illuminate\Validation\Rule;
 
 class UpdateServiceRequest extends FormRequest
@@ -36,7 +36,7 @@ class UpdateServiceRequest extends FormRequest
             'delivery_time' => [
                 'required', 'integer', 'max:100',
             ],
-            'revision_time' => [
+            'revision_limit' => [
                 'required', 'integer', 'max:100',
             ],
             'price' => [

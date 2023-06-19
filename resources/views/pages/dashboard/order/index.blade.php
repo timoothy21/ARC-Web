@@ -56,7 +56,6 @@
                                                 </div>
                                                 <div>
                                                     <p class="font-medium text-black">{{ $order->user_buyer->name ?? '' }}</p>
-                                                    <!-- <p class="text-sm text-gray-400">{{ $order->user_freelancer->detail_user->role ?? '' }}</p> -->
                                                 </div>
                                             </div>
                                         </td>
